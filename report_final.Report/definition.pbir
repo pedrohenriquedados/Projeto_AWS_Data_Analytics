@@ -1,0 +1,9 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definitionProperties/2.0.0/schema.json",
+  "version": "4.0",
+  "datasetReference": {
+    "byConnection": {
+      "connectionString": "Data Source=powerbi://api.powerbi.com/v1.0/myorg/cargas&cubos;initial catalog=cubo_final;access mode=readonly;integrated security=ClaimsToken;semanticmodelid=a13cbb60-c709-4052-970a-ef2511f20e43"
+    }
+  }
+}

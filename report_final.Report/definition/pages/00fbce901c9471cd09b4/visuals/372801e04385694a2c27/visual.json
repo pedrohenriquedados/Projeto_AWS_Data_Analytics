@@ -1,0 +1,107 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "372801e04385694a2c27",
+  "position": {
+    "x": 80.274711469203837,
+    "y": 273.75734936933617,
+    "z": 3,
+    "height": 426.07346856731266,
+    "width": 654.5476473642774,
+    "tabOrder": 3
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "etl_dados_processados"
+                    }
+                  },
+                  "Property": "senioridade"
+                }
+              },
+              "queryRef": "etl_dados_processados.senioridade",
+              "nativeQueryRef": "senioridade",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_medidas"
+                    }
+                  },
+                  "Property": "TotalColaboradores"
+                }
+              },
+              "queryRef": "_medidas.TotalColaboradores",
+              "nativeQueryRef": "TotalColaboradores"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "_medidas"
+                  }
+                },
+                "Property": "TotalColaboradores"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "e399c1317b9aacb55808",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_medidas"
+              }
+            },
+            "Property": "TotalColaboradores"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "fb483dcf5a212e72a472",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "etl_dados_processados"
+              }
+            },
+            "Property": "senioridade"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}

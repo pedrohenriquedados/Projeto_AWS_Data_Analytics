@@ -1,0 +1,107 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "7af55e455c9c8ae9c8db",
+  "position": {
+    "x": 767.75557379520592,
+    "y": 273.75734936933617,
+    "z": 5,
+    "height": 426.07346856731266,
+    "width": 654.5476473642774,
+    "tabOrder": 5
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "etl_dados_processados"
+                    }
+                  },
+                  "Property": "senioridade"
+                }
+              },
+              "queryRef": "etl_dados_processados.senioridade",
+              "nativeQueryRef": "senioridade",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_medidas"
+                    }
+                  },
+                  "Property": "MediaSalario"
+                }
+              },
+              "queryRef": "_medidas.MediaSalario",
+              "nativeQueryRef": "MediaSalario"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "_medidas"
+                  }
+                },
+                "Property": "MediaSalario"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "f0761be0150700708132",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "etl_dados_processados"
+              }
+            },
+            "Property": "senioridade"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "a8135c7149d9ac99278d",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_medidas"
+              }
+            },
+            "Property": "MediaSalario"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

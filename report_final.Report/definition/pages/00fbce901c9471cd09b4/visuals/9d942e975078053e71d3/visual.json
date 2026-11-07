@@ -1,0 +1,107 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "9d942e975078053e71d3",
+  "position": {
+    "x": 80.274711469203837,
+    "y": 726.58905509305009,
+    "z": 4,
+    "height": 333.44880148746211,
+    "width": 1796.9185413491014,
+    "tabOrder": 4
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "etl_dados_processados"
+                    }
+                  },
+                  "Property": "empresa"
+                }
+              },
+              "queryRef": "etl_dados_processados.empresa",
+              "nativeQueryRef": "empresa",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_medidas"
+                    }
+                  },
+                  "Property": "MediaSalario"
+                }
+              },
+              "queryRef": "_medidas.MediaSalario",
+              "nativeQueryRef": "MediaSalario"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "_medidas"
+                  }
+                },
+                "Property": "MediaSalario"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "5798f19d1402dc0a12d0",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "etl_dados_processados"
+              }
+            },
+            "Property": "empresa"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "c973e75db73b0a807e22",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_medidas"
+              }
+            },
+            "Property": "MediaSalario"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}
