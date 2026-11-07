@@ -74,4 +74,4 @@ Semântico) · Power BI
 
 ## Demonstração
 
-Vídeo de 3 minutos mostrando neste repositório
+Vídeo de 3 minutos mostrando a solução: https://lnkd.in/p/d9csggcC
